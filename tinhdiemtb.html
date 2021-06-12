@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>điểm trung bình</title>
+</head>
+<body>
+<input type="text" id="a">
+<br>
+<br>
+<input type="text" id="b">
+<br>
+<br>
+<input type="text" id="c">
+<button onclick="a1()">tính</button>
+<p id="demo"> kết quả </p>
+<p id="vd">thông báo</p>
+<script>
+   function a1() {
+       let toan= +document.getElementById('a').value;
+       let ly = +document.getElementById('b').value;
+       let hoa = +document.getElementById('c').value;
+       let diemtong = (toan+ly+hoa)/3;
+       document.getElementById("demo").innerText=diemtong;
+       // alert('diem trung binh' +diemtong)
+if(diemtong>5){
+    if (diemtong>7){
+        document.getElementById('vd').innerText="tot";
+    }
+    else {
+        document.getElementById('vd').innerText="dat";
+    }
+}else {
+    if (diemtong<3){
+    document.getElementById('vd').innerText="yeu";
+}
+else {
+    document.getElementById('vd').innerText="khong dat";
+}
+
+}
+       
+   }
+</script>
+</body>
+</html>
